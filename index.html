@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>POC</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Speak Multipager Template: Help Documents</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+ 
+
+</head>
+
+<body id="page-top" class="index" ng-app="mgModule">
+    <div class="navbar navbar-inverse navbar-fixed-top scrollclass">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="#">Speak Multipager : Help Docs</a>-->
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li><a href="ContactUs.html">Contact us</a></li>
+                    <li><a href="Login.html">Logins</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <section id="overview">
+        <div class="container">
+            <div class="row  pad-top">
+                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-sm-12">
+                  
+				  <h1>This is an Mobile Application by Gaurav Joshi</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/plugins/bootstrap.js"></script>
+    <!-- EASING SCROLL SCRIPTS PLUGIN  -->
+    <script src="assets/plugins/jquery.easing.min.js"></script>
+    <script>
+         <!-- CUSTOM SCROLL SCRIPT FUNCTION FOR NAVBAR  -->
+        $(function () {
+            $('.scrollclass a').bind('click', function (event) { //just pass scrollclass in design and start scrolling
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1200, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        });
+
+    </script>
+</body>
+</html>
